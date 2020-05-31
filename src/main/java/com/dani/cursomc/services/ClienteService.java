@@ -27,6 +27,7 @@ public class ClienteService {
 		return obj.orElseThrow(() -> new ObjectNotFoundException("Objeto não entrado! Id: " + id +
 				", Tipo: " + Cliente.class));
 	}
+	
 	public Cliente update(Cliente obj) {
 		Cliente newObj = find(obj.getId());
 		updateData(newObj, obj);
